@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Layout with Embedded CSS</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #f4f4f4;
+        color: #0f3c03;
+      }
+
+      .navbar {
+        background-color: #0f3c03;
+        color: white;
+        overflow: hidden;
+      }
+
+      .navbar ul {
+        list-style-type: none;
+        text-align: center;
+      }
+
+      .navbar ul li {
+        display: inline-block;
+      }
+
+      .navbar ul li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+      }
+
+      .navbar ul li a:hover {
+        background-color: #a3ab82;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: 20px auto;
+        padding: 0 20px;
+        overflow: hidden;
+      }
+
+      .box {
+        float: left;
+        padding: 20px;
+        background: white;
+        border: 1px solid #ddd;
+        min-height: 250px;
+      }
+
+      .box-left {
+        width: 70%;
+        margin-right: 1%;
+      }
+
+      .box-right {
+        width: 29%;
+        align-items: center;
+      }
+
+      .box-down {
+        margin-top: 5%;
+      }
+
+      .box-down ul {
+        list-style: none;
+        padding: 0;
+        margin: 20px auto;
+        max-width: 760px;
+      }
+
+      .box-down ul li {
+        background: #ffffff;
+        border: 1px solid #e6eadf;
+        padding: 12px 16px;
+        margin: 10px 0;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(15, 60, 3, 0.06);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #0f3c03;
+        font-size: 0.98rem;
+      }
+
+      .buttons {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin: 20px 0;
+      }
+
+      .buttons button {
+        background: #0f3c03;
+        color: #fff;
+        border: none;
+        padding: 10px 18px;
+        border-radius: 6px;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+
+      .footer {
+        background-color: #0f3c03;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+
+      .img1 {
+        display: flex;
+        align-items: left;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 5%;
+        width: 50%;
+      }
+
+      h2 {
+        margin-bottom: 10px;
+      }
+      p {
+        margin-bottom: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="navbar">
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="box box-left">
+        <h2 style="text-align: center">RecycLink</h2>
+        <p>Make recycling rewarding—literally.</p>
+        <p>
+          “RecycLink bridges households, junk shops, and recycling
+          businesses—making recycling easier, profitable, and planet-friendly.”
+        </p>
+        <img src="images/stock.jpg" alt="" class="img1" />
+        <section class="buttons">
+          <button>Download The App</button>
+          <button>Join as Recycler</button>
+        </section>
+      </section>
+
+      <aside class="box box-right">
+        <h2>Sidebar</h2>
+        <p>
+          This area is often used for auxiliary information, navigation links,
+          advertisements, or widgets. It's the smaller of the two columns.
+        </p>
+        <p>
+          The total width of the two boxes and the margin between them adds up
+          to 100%.
+        </p>
+      </aside>
+
+      <section class="box box-down">
+        <h2 style="text-align: center">RecycLink</h2>
+        <ul>
+          <li>
+            Smart Matching System: Automatically pairs sellers and buyers based
+            on location and type of waste.
+          </li>
+          <li>Transparent Pricing: Shows current buying rates per material.</li>
+          <li>Pickup Scheduling: Arrange pickups with verified recyclers.</li>
+          <li>
+            Eco-Rewards: Earn points redeemable for vouchers or donations.
+          </li>
+          <li>
+            Verified Network: Trusted recyclers, businesses, and cooperatives.
+          </li>
+        </ul>
+        <p>
+          It is a long established fact that a reader will be distracted by the
+          readable content of a page when looking at its layout.
+        </p>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book.
+        </p>
+        <p>
+          There are many variations of passages of Lorem Ipsum available, but
+          the majority have suffered alteration in some form, by injected
+          humour, or randomised words which don't look even slightly believable.
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2025 RecycLink</p>
+    </footer>
+  </body>
+</html>
