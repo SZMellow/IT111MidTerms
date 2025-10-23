@@ -70,6 +70,22 @@
         align-items: center;
       }
 
+      .box-right .sidebarnav ul {
+        list-style: none;
+        padding: 0;
+        margin: 20px 0;
+      }
+
+      .box-right .sidebarnav ul li {
+        background: #0f3c03;
+        color: #fff;
+        padding: 10px;
+        margin: 8px 0;
+        border-radius: 6px;
+        text-align: center;
+        cursor: pointer;
+      }
+
       .box-down {
         margin-top: 5%;
       }
@@ -93,6 +109,10 @@
         gap: 10px;
         color: #0f3c03;
         font-size: 0.98rem;
+      }
+
+      .box-down ul li::before {
+        content: "⦿";
       }
 
       .buttons {
@@ -167,6 +187,16 @@
 
       <aside class="box box-right">
         <h2>Sidebar</h2>
+        <section class="sidebarnav">
+          <nav>
+            <ul>
+              <li>Impact</li>
+              <li>FAQs</li>
+              <li>Downloads</li>
+              <li>For Recyclers</li>
+            </ul>
+          </nav>
+        </section>
         <p>
           This area is often used for auxiliary information, navigation links,
           advertisements, or widgets. It's the smaller of the two columns.
