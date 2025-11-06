@@ -1,0 +1,328 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Navigation */
+nav {
+    background-color: #f4f4f4;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+nav a:hover {
+    color: #007bff;
+}
+
+nav img {
+    max-width: 150px;
+    height: auto;
+}
+
+/* Hero Section */
+.hero {
+    padding: 2rem;
+    text-align: center;
+    background-color: #e8f5e9;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+.hero button {
+    padding: 0.75rem 1.5rem;
+    margin: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 4px;
+}
+
+.hero button:hover {
+    background-color: #45a049;
+}
+
+.hero img {
+    max-width: 200px;
+    height: auto;
+}
+
+/* About Section */
+.about {
+    padding: 2rem;
+    background-color: #fff;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.about h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.about p {
+    margin: 0.5rem 0;
+}
+
+/* Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.grid > div {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+/* Features Section */
+.features {
+    padding: 2rem;
+    background-color: #f0f0f0;
+}
+
+.features h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.features h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.features h4 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.features p {
+    margin: 0.5rem 0;
+}
+
+/* Steps Layout */
+.steps {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.steps > div {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+/* Recyclers Section */
+.recyclers {
+    padding: 2rem;
+    background-color: #fff;
+}
+
+.recyclers h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.recyclers p {
+    margin: 1rem 0;
+}
+
+.recyclers button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    background-color: #2196f3;
+    color: white;
+    border-radius: 4px;
+}
+
+.recyclers button:hover {
+    background-color: #0b7dda;
+}
+
+/* Contact Section */
+.contact {
+    padding: 2rem;
+    background-color: #f9f9f9;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.contact p {
+    margin: 0.5rem 0;
+}
+
+/* FAQs Section */
+.faqs {
+    padding: 2rem;
+    background-color: #fff;
+}
+
+.faqs h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.faqs h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.faqs h4 {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+}
+
+.faqs input[type="text"] {
+    width: 100%;
+    max-width: 500px;
+    padding: 0.75rem;
+    margin: 1rem 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* List Layout */
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.list > div {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+/* Download Section */
+.download {
+    padding: 2rem;
+    background-color: #e3f2fd;
+}
+
+.download h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.download button {
+    padding: 0.75rem 1.5rem;
+    margin: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    background-color: #ff9800;
+    color: white;
+    border-radius: 4px;
+}
+
+.download button:hover {
+    background-color: #e68900;
+}
+
+.download select {
+    padding: 0.75rem;
+    margin: 1rem 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+footer a:hover {
+    color: #4caf50;
+}
+
+footer p {
+    margin-top: 1rem;
+}
+
+/* General Styles */
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+h4 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
