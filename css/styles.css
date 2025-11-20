@@ -1,0 +1,503 @@
+/* Unified Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Color Palette Variables */
+:root {
+  --background-main: #f1f2ed;
+  --primary: #048d55;
+  --secondary: #048d55;
+  --accent: #0c3c01;
+  --text-main: #2e2d1d;
+  --card-bg: #fff;
+  --card-border: #a2ac82;
+  --feature-bg: #a2ac82;
+  --feature-card-bg: #f1f2ed;
+  --feature-icon-bg: #048d55;
+  --feature-icon-color: #f1f2ed;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: var(--background-main);
+  color: var(--text-main);
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  background-color: var(--secondary);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(44, 61, 29, 0.2);
+}
+
+/* 2. Inner Content Wrapper */
+.navbar-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px; /* Fixed height for the nav bar */
+}
+
+/* 3. Logo/Brand Section */
+.navbar-logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--feature-icon-color);
+}
+
+.navbar-logo img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-logo .brand-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .navbar-logo .brand-name {
+    display: block;
+  }
+}
+
+/* 4. Links Section (Desktop) */
+.navbar-links {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+}
+
+.navbar-links a {
+  color: var(--feature-icon-color);
+  text-decoration: none;
+  padding: 8px 12px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 4px;
+  transition: color 0.15s, background-color 0.15s;
+}
+
+.navbar-links a:hover {
+  color: var(--primary);
+}
+
+.navbar-links .cta-button {
+  background-color: var(--accent);
+  padding: 8px 16px;
+  border-radius: 9999px;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(44, 61, 29, 0.2);
+}
+
+.navbar-links .cta-button:hover {
+  background-color: var(--secondary);
+  color: var(--feature-icon-color);
+}
+
+/* 5. Mobile Menu Button */
+.menu-button {
+  display: block;
+  color: var(--feature-icon-color);
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+@media (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: url("../images/Backgrounds/hero.png") no-repeat center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--feature-icon-color);
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.hero-buttons .btn {
+  padding: 10px 20px;
+  margin: 5px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.primary {
+  background-color: var(--primary);
+  color: var(--feature-icon-color);
+}
+
+.secondary {
+  border: 2px solid var(--feature-icon-color);
+  color: var(--feature-icon-color);
+  background: transparent;
+}
+
+.feature-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 60px 80px;
+  max-width: 1200px;
+  margin: auto;
+  background-color: var(--feature-bg);
+}
+
+/* Main Container */
+.split-section {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Left Side: Content (40%) */
+.content-side {
+  width: 40%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--card-bg);
+}
+
+.content-side h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: var(--secondary);
+}
+
+/* Styling for the paragraphs */
+.text-block {
+  font-size: 1rem;
+  color: var(--text-main);
+  line-height: 1.6;
+  margin-bottom: 30px; /* Space below paragraphs */
+}
+
+/* The Container for the 2 Cards */
+.cards-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 equal columns */
+  gap: 20px;
+  margin-bottom: 30px; /* Space below the cards before the next paragraph */
+}
+
+/* Card Styling */
+.card {
+  background: var(--card-bg);
+  padding: 20px;
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(44, 61, 29, 0.05);
+  text-align: center; /* Centers text and image inside card */
+}
+
+/* Small Image inside Card */
+.card-icon {
+  width: 50px; /* Controls the size of the small image */
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: var(--secondary);
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: var(--text-main);
+  line-height: 1.4;
+}
+
+/* Right Side: Image (60%) */
+.image-side {
+  width: 60%;
+  position: relative;
+}
+
+.image-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* RESPONSIVE: Mobile View (Under 900px) */
+@media (max-width: 900px) {
+  .split-section {
+    flex-direction: column-reverse;
+  }
+
+  .content-side,
+  .image-side {
+    width: 100%;
+    height: auto;
+  }
+
+  .image-side {
+    height: 300px;
+  }
+
+  /* On mobile, stack the cards vertically instead of side-by-side */
+  .cards-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- Features Section Styles --- */
+
+.features-section {
+  padding: 80px 20px;
+  background-color: var(--feature-card-bg);
+}
+
+.container {
+  max-width: 1200px; /* Limits width on large screens */
+  margin: 0 auto; /* Centers the container */
+}
+
+/* Header Styling */
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: var(--secondary);
+  margin-bottom: 10px;
+}
+
+.section-header p {
+  color: var(--text-main);
+  font-size: 1.1rem;
+}
+
+/* Grid Layout: 3 Columns */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* Card Styling */
+.feature-card {
+  background: var(--card-bg);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(44, 61, 29, 0.05);
+  border: 1px solid var(--card-border);
+  text-align: left;
+  display: flex;
+  flex-direction: column; /* Ensures content stacks neatly */
+}
+
+/* Icon Circle */
+.icon-box {
+  background-color: var(--feature-icon-bg);
+  color: var(--feature-icon-color);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.feature-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+  color: var(--secondary);
+}
+
+/* --- NEW IMAGE STYLING --- */
+.card-middle-img {
+  width: 100%;
+  height: 160px; /* Fixed height prevents uneven cards */
+  object-fit: cover; /* Ensures image fills the box without stretching */
+  border-radius: 8px;
+  margin-bottom: 15px; /* Space between image and paragraph */
+}
+
+.feature-card p {
+  color: var(--text-main);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 1. The Container (Applies Border and Margin) */
+.image-container {
+  /* REQUIRED: 10% Margin on all sides (relative to the viewport/parent width) */
+  margin: 1%;
+
+  /* Set a specific width/height for the container for better control */
+
+  /* Optional: Adding a visible border around the section */
+  border: 5px solid var(--secondary);
+  border-radius: 12px;
+  background-color: var(--card-bg); /* Background color behind the image */
+
+  /* Ensure the container is displayed as a block element */
+  display: block;
+  box-sizing: border-box; /* Ensures padding/border are included in the element's total size */
+  overflow: hidden; /* Important for containing floated/inline elements */
+}
+
+/* 2. The Image (Applies Padding) */
+.image-container img {
+  /* REQUIRED: 20% Padding on all sides (relative to the container's width) */
+  padding: 1%;
+
+  /* Make the image itself fill the content area */
+  width: 100%;
+  height: auto;
+  display: block; /* Removes any baseline spacing issues */
+
+  /* Optional: Adjusting image appearance */
+  object-fit: contain;
+}
+/* Container and Layout (Flexbox for two columns) */
+.recyclers-feature {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: row; /* Default: side-by-side */
+  gap: 40px;
+  align-items: center;
+}
+
+/* Responsiveness: Stack columns on smaller screens */
+@media (max-width: 768px) {
+  .recyclers-feature {
+    flex-direction: column;
+    margin: 40px auto;
+  }
+}
+
+/* Text Column */
+.recyclers-text-content {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.recyclers-text-content .recyclers-subtitle {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.recyclers-text-content .recyclers-headline {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--secondary);
+  margin-bottom: 24px;
+}
+
+.recyclers-text-content .recyclers-body-text {
+  font-size: 1.125rem;
+  color: var(--text-main);
+  margin-bottom: 32px;
+}
+
+.recyclers-cta-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 24px;
+  background-color: var(--accent);
+  color: var(--feature-icon-color);
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.recyclers-cta-button:hover {
+  background-color: var(--secondary);
+}
+
+/* Image Column */
+.recyclers-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.recyclers-image-frame {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  border: 2px solid var(--primary);
+  padding: 6px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.recyclers-image-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
